@@ -234,12 +234,8 @@ const HomePage = () => {
                       />
                       <Button 
                         className='button-submit'
-                        onClick={() => {
-                          if (isLoading) handleStop();
-                          else handleSubmit();
-                        }}
                       >
-                        {isLoading? <BiLoader className='is-loading' /> : <BiPaperPlane/>}
+                        {isLoading? <BiLoader className='is-loading' onClick={handleStop} /> : <BiPaperPlane onClick={handleSubmit}/>}
                       </Button>
                     </InputGroup>
                   </Col>
