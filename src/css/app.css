@@ -153,3 +153,12 @@
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
     }
+
+
+    .side-bar {
+      background-image: url(./images/sidebar.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: blur(20px);
+    }
