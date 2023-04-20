@@ -157,7 +157,7 @@
 
     .side-bar {
       background-image: url(./images/sidebar.jpg);
-      background-position: center;
+      background-position: -60px;
       background-repeat: no-repeat;
       background-size: cover;
       filter: blur(20px);
