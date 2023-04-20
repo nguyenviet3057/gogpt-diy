@@ -1,0 +1,155 @@
+
+    .page {
+      padding: 16px 16px 96px 16px;
+    }
+    
+    .section-container {
+      padding: 16px;
+      background: #ffffff;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }    
+
+    html {
+      overflow: hidden;
+    }
+
+    .default {
+      background-color: rgba(52,53,65);
+      color: rgba(236,236,241);
+      border: none;
+      padding: 0px;
+      overflow: hidden;
+      /* padding-bottom: 59px; */
+    }
+
+    .row-header {
+      position: sticky;
+      top: 0px;
+      z-index: 99;
+      width: 100%;
+      padding: 10px;
+      margin: 0px;
+      height: 40px;
+      background-color: rgba(52,53,65);
+      font-size: large;
+      font-weight: bold;
+      border-bottom: 1px solid gray;
+    }
+    .logo-company {
+      background: url(./images/logo_planx.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .quiz-content {
+      height: calc(100vh - 99px);
+      /* margin-top: 41px; */
+      margin-bottom: 59px;
+      overflow-y: scroll;
+    }
+    .card-quiz {
+      background-color: rgba(52,53,65);
+      color: rgba(236,236,241);
+      border: none;
+      padding: 0px;
+    }
+    .card-quiz .row-quiz {
+      border: none;
+      padding: 20px 12px;
+      text-align: justify;
+      white-space: pre-wrap;
+      min-height: 80px;
+    }
+    .quiz-content .current-quiz::after {
+      content: " \258C";
+    }
+
+    .answer {
+      background-color: rgba(68,70,84);
+      color: rgba(236,236,241);
+      border: none;
+    }
+    .footer {
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      width: calc(100vw / 12 * 10);
+      margin: 0px;
+      padding: 10px 10px;
+      background-color: transparent;
+      color: rgba(236,236,241);
+      border: none;
+      border-top: 1px solid gray;
+    }
+    .footer-content {
+      background-color: rgba(52,53,65);
+      color: rgba(236,236,241);
+      border: none;
+      border-top: 1px solid gray;
+    }
+    .input-textarea {
+      background-color: rgba(68,70,84) !important;
+      color: rgba(236,236,241) !important;
+      max-height: 100px;
+      height: 38px;
+      border: none;
+      resize: none; 
+      overflow-y: scroll;
+      box-shadow: none !important;
+    }
+    .button-submit {
+      background-color: rgba(68,70,84) !important;
+      color: rgba(236,236,241) !important;
+      border: none;
+      box-shadow: none !important;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .is-loading {
+      animation: spin 3s linear infinite;
+      /* Add any additional styles to your loading element */
+    }
+    
+    .bottom-page {
+      display: none;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      right: 15px;
+      bottom: 75px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid darkgray;
+      background-color: rgba(68,70,84,0.8);
+      color: whitesmoke;
+      text-align: center;
+      cursor: pointer;
+    }
+
+
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .quiz-content::-webkit-scrollbar, .input-textarea::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .quiz-content, .input-textarea {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
