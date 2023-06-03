@@ -95,7 +95,7 @@ const HomePage = () => {
           content += JSON.parse(sentence).choices[0].delta.content;
           setAns(content);
           // console.log(isTouchingRef.current);
-          // console.log(JSON.parse(sentence).choices[0].delta.content);
+          console.log(JSON.parse(sentence).choices[0].delta.content);
         }
       }
       scrollToBottom()
@@ -129,18 +129,19 @@ const HomePage = () => {
     setQuestList(qList);
     console.log(questList);
     var raw = JSON.stringify({
-      "model": "gpt-3.5-turbo",
+      "model": "gpt-4",
       "messages": [
         {
           "role": "user",
           "content": quest
         }
       ],
-      "max_tokens": 50,
-      "temperature": 0.5,
+      "max_tokens": 5,
+      "temperature": 0.2,
       "stream": true
     });
-    // https://free.churchless.tech/v1/chat/completions
+    // https://free.churchless.tech/v1/chat/completions => gpt-3.5
+    // https://free.churchless.tech/v2/chat/completions => gpt-4
     fetch("https://free.churchless.tech/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -157,11 +158,11 @@ const HomePage = () => {
     isCancelledRef.current = true;
   }
 
-  const handleDown = () => {
-    // console.log("down")
-    isTouchingRef.current = true;
-    // console.log(isTouchingRef.current);
-  }
+  // const handleDown = () => {
+  //   // console.log("down")
+  //   isTouchingRef.current = true;
+  //   // console.log(isTouchingRef.current);
+  // }
 
   const handleBottomPage = () => {
     isTouchingRef.current = false;
@@ -214,10 +215,10 @@ const HomePage = () => {
                 {questList.map((item, index) => {
                   if (index == questList.length - 1) return;
                   else return (
-                    <Quiz key={index} quest={questList[index]} ans={ansList[index]}></Quiz>
+                    <Quiz key={index} handleScroll={handleScroll} quest={questList[index]} ans={ansList[index]}></Quiz>
                   )
                 })}
-                {(questLatest=="")? <></> : <Quiz current={isLoading? "current-quiz" : ""} quest={questLatest} ans={ans}></Quiz>}
+                {(questLatest=="")? <></> : <Quiz current={isLoading? "current-quiz" : ""} handleScroll={handleScroll} quest={questLatest} ans={ans} isLoading={isLoading}></Quiz>}
                 
               </Container>
               <Container fluid className='footer'>
@@ -232,11 +233,15 @@ const HomePage = () => {
                         value={quest}
                         onChange={handleInputChange}
                       />
-                      <Button 
-                        className='button-submit'
-                      >
-                        {isLoading? <BiLoader className='is-loading' onClick={handleStop} /> : <BiPaperPlane onClick={handleSubmit}/>}
+                      {isLoading? 
+                      <Button className='button-submit' onClick={handleStop}>
+                        <BiLoader className='is-loading'/>
                       </Button>
+                      :
+                      <Button className='button-submit' onClick={handleSubmit}>
+                        <BiPaperPlane/>
+                      </Button>
+                      }
                     </InputGroup>
                   </Col>
                 </Row>               

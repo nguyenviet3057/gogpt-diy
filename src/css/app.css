@@ -74,7 +74,18 @@
       background-color: rgba(68,70,84);
       color: rgba(236,236,241);
       border: none;
+      overflow: hidden;
     }
+    .answer.shortern {
+      overflow: visible !important;
+    }
+    /* .answer.shortern div.row {
+      margin: 8px 12px;
+    } */
+    .answer-shortern {
+      box-shadow: 0 -6px 6px -3px #333;
+    }
+
     .footer {
       position: fixed;
       right: 0px;
@@ -155,10 +166,10 @@
     }
 
 
-    .side-bar {
+    /* .side-bar {
       background-image: url(./images/sidebar.jpg);
       background-position: -60px;
       background-repeat: no-repeat;
       background-size: cover;
       filter: blur(20px);
-    }
+    } */
