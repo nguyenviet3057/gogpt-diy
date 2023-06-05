@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/gogpt/static/css/main.c427a916.css",
-    "main.js": "/gogpt/static/js/main.2f7a98a6.js",
+    "main.css": "/gogpt/static/css/main.3733ded2.css",
+    "main.js": "/gogpt/static/js/main.2298860d.js",
     "static/js/787.5f7d0cd8.chunk.js": "/gogpt/static/js/787.5f7d0cd8.chunk.js",
-    "static/media/sidebar.jpg": "/gogpt/static/media/sidebar.fc84c6e1193d004d9e31.jpg",
     "static/media/logo_planx.jpg": "/gogpt/static/media/logo_planx.a17a700d970b01df2cfc.jpg",
     "index.html": "/gogpt/index.html",
-    "main.c427a916.css.map": "/gogpt/static/css/main.c427a916.css.map",
-    "main.2f7a98a6.js.map": "/gogpt/static/js/main.2f7a98a6.js.map",
+    "main.3733ded2.css.map": "/gogpt/static/css/main.3733ded2.css.map",
+    "main.2298860d.js.map": "/gogpt/static/js/main.2298860d.js.map",
     "787.5f7d0cd8.chunk.js.map": "/gogpt/static/js/787.5f7d0cd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c427a916.css",
-    "static/js/main.2f7a98a6.js"
+    "static/css/main.3733ded2.css",
+    "static/js/main.2298860d.js"
   ]
 }
